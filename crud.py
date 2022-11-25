@@ -1,5 +1,6 @@
 from utils import hash_password
 import models, schemas
+from .main import countries
 import uuid
 
 
@@ -21,8 +22,6 @@ class UserCrud:
         db.commit()
         db.refresh(db_user)
         return db_user
-
-
 
 
 
