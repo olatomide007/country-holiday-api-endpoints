@@ -63,7 +63,7 @@ class UserDetails(UserBase):
 from dotenv import load_dotenv
 import os
 load_dotenv()
-from fastapi_jwt_auth import AuthJWT
+#from fastapi_jwt_auth import AuthJWT
 SECRET_KEY='random'
 
 class Settings(BaseModel):
@@ -75,7 +75,7 @@ class Settings(BaseModel):
     authjwt_cookie_samesite:str ='lax'
 
 
-@AuthJWT.load_config
+# @AuthJWT.load_config
 def get_config():
     return Settings()
 
