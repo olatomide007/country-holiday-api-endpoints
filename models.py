@@ -16,7 +16,7 @@ class User(Base):
     date_created = Column(DateTime, default=datetime.utcnow())
     reset_pass = relationship('ResetPass', back_populates='user')
 
-class Countries(Base):
+class Country(Base):
     __tablename__ = "countries"
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String)
